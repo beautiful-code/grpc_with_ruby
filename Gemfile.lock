@@ -36,6 +36,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     public_suffix (3.0.2)
+    rake (12.3.0)
     signet (0.8.1)
       addressable (~> 2.3)
       faraday (~> 0.9)
@@ -49,6 +50,7 @@ DEPENDENCIES
   grpc
   grpc-tools
   pry
+  rake
 
 BUNDLED WITH
    1.16.1

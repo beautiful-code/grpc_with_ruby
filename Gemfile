@@ -3,6 +3,8 @@
 source 'https://rubygems.org'
 
 gem 'activerecord', :require=>"active_record"
+gem 'daemons'
+gem 'delayed_job_active_record'
 gem 'grpc'
 gem 'grpc-tools'
 gem 'mysql2'

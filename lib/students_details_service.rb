@@ -4,6 +4,7 @@ require 'bundler/setup'
 Bundler.require(:default)
 
 require './lib/protos/students_details_services_pb'
+require './config/initializers'
 require './app'
 
 class StudentsDetailsService < StudentsDetails::StudentsDetailsService::Service

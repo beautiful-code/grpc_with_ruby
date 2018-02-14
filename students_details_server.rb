@@ -21,7 +21,7 @@ class StudentsDetailsServer
     private
 
     def start_grpc_server
-      @server = GRPC::RpcServer.new
+      @server = GRPC::RpcServer.new(pool_size: 5)
       @server.add_http2_port('0.0.0.0:50052', :this_port_is_insecure)
       @server.handle(StudentsDetailsService)
       @server.run_till_terminated

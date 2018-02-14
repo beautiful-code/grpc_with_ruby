@@ -2,10 +2,10 @@ class DbConfig
   def self.config
     {
       adapter: 'mysql2',
-      host: 'localhost',
-      username: 'root',
-      password: '********',
-      database: 'student_details_db',
+      host: ENV['DB_HOST'],
+      username: ENV['DB_USERNAME'],
+      password: ENV['DB_PASSWORD'],
+      database: ENV['DB_NAME'],
       pool: 5,
       timeout: 5000,
       reconnect: true

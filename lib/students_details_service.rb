@@ -2,6 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 
 Bundler.require(:default)
+Dotenv.load
 
 require './lib/protos/students_details_services_pb'
 require './config/initializers'

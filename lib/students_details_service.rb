@@ -12,4 +12,8 @@ class StudentsDetailsService < StudentsDetails::StudentsDetailsService::Service
   def hello(request, _unused_call)
     HelloController.say_hello(request)
   end
+
+  def search_students(request, _unused_call)
+    StudentsController.search(request)
+  end
 end

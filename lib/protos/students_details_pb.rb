@@ -10,9 +10,22 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   add_message "students_details.HelloResponse" do
     optional :body, :string, 1
   end
+  add_message "students_details.SearchRequest" do
+    optional :name, :string, 1
+  end
+  add_message "students_details.Students" do
+    repeated :students, :message, 1, "students_details.Student"
+  end
+  add_message "students_details.Student" do
+    optional :name, :string, 1
+    optional :age, :int64, 2
+  end
 end
 
 module StudentsDetails
   HelloRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("students_details.HelloRequest").msgclass
   HelloResponse = Google::Protobuf::DescriptorPool.generated_pool.lookup("students_details.HelloResponse").msgclass
+  SearchRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("students_details.SearchRequest").msgclass
+  Students = Google::Protobuf::DescriptorPool.generated_pool.lookup("students_details.Students").msgclass
+  Student = Google::Protobuf::DescriptorPool.generated_pool.lookup("students_details.Student").msgclass
 end

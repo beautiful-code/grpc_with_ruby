@@ -3,6 +3,7 @@ package students_details;
 
 service StudentsDetailsService {
   rpc Hello( HelloRequest ) returns ( HelloResponse ) {}
+  rpc SearchStudents( SearchRequest ) returns ( Students ) {}
 }
 
 message HelloRequest {
@@ -11,4 +12,17 @@ message HelloRequest {
 
 message HelloResponse {
   string body = 1;
+}
+
+message SearchRequest {
+  string name = 1;
+}
+
+message Students {
+  repeated Student students = 1;
+}
+
+message Student {
+  string name = 1;
+  int64 age = 2;
 }

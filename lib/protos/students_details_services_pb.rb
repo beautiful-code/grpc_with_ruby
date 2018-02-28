@@ -15,6 +15,7 @@ module StudentsDetails
       self.service_name = 'students_details.StudentsDetailsService'
 
       rpc :Hello, HelloRequest, HelloResponse
+      rpc :SearchStudents, SearchRequest, Students
     end
 
     Stub = Service.rpc_stub_class
